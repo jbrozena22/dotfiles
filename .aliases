@@ -1,0 +1,25 @@
+source ~/.secrets.env
+
+alias dc='docker-compose'
+alias yin='yarn install'
+alias dcud='docker-compose up -d'
+alias dcr='docker-compose restart'
+alias dcl='docker-compose logs'
+alias dclt='docker-compose logs -f'
+alias dcl100='docker-compose logs --tail=100'
+alias rm-postgres="docker-compose kill postgres; docker-compose rm -f -v postgres; docker-compose up -d postgres"
+alias rm-udal-postgres="docker-compose kill udal-postgres; docker-compose rm -f -v udal-postgres; docker-compose up -d udal-postgres"
+alias kc='kubectl'
+alias kca='f(){ kubectl "$@" --all-namespaces -o wide;  unset -f f; }; f'
+
+alias devboxbaby='mosh ${DEVBOXUSERNAME}@${DEVBOXADDRESS}'
+alias kp='~/projects/meta/devops/kubernetes_switch_project.sh'
+alias ALL='--all-namespaces'
+alias n='--namepsace='
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]' | pbcopy && pbpaste && echo"
+alias pwd_generator='openssl rand -base64 32 | base64'
+alias PSQL-STAGING='psql -h ${PSQL-STAGING_IP} -p 5432 -U grid -d postgres'
+alias backup-git-untracked='echo "BACKUP_LOCATION=\"../backup/\"; for file in $(git ls-files --others --exclude-standard); do mkdir -p ../$BACKUP_LOCATION/$(dirname $file) ; cp $file ../$BACKUP_LOCATION/$file ; done"'
+alias restart-drone='kubectl delete pod -n default -l app=drone,component=agent'
+alias history-no-num='history | sed "s/^[ ]*[0-9]\+[ ]*//"'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
