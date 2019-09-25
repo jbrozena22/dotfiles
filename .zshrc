@@ -114,3 +114,4 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 . $HOME/.nix-profile/etc/profile.d/nix.sh
 export GIT_EDITOR=vim
 export KUBE_EDITOR=vim
+#eval "$(pyenv init -)"
