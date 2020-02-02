@@ -120,8 +120,27 @@ source ~/.aliases
 export PATH="/snap/bin/:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.node/bin:$PATH"
+# added by Anaconda3 installer
+# export PATH="/home/john/anaconda3/bin:$PATH"  # commented out by conda initialize
 export NODE_PATH="$HOME/.node/lib/node_modules:$NODE_PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 . $HOME/.nix-profile/etc/profile.d/nix.sh
 source <(kubectl completion bash)
+
+
+ # >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/john/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/john/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/john/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/john/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
