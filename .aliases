@@ -32,3 +32,4 @@ alias kf='pkill -f firefox'
 alias vpn='sudo openvpn --config ~/.openvpn/client.ovpn --auth-user-pass --auth-retry interact --auth-user-pass ~/.openvpn/user.txt'
 SORTBYTIME="--sort-by=.metadata.creationTimestamp"
 alias pandas='nix-shell -p python36Packages.pandas --run python'
+alias rm-old-pods='kubectl get pods --no-headers=true |grep -v "Running" | grep -v "Pending" | sed -E '"'"'s/([a-z0-9-]+).*/\1/g'"'"' | xargs kubectl delete pod'
