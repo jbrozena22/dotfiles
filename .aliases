@@ -29,5 +29,6 @@ alias runbox='kc run -i --tty busybox --image=busybox -- sh'
 alias open='xdg-open'
 alias rm-pyc='find /home/john/grid/ -name "*.pyc" -exec sudo rm -f {} \;'
 alias kf='pkill -f firefox'
-
+alias vpn='sudo openvpn --config ~/.openvpn/client.ovpn --auth-user-pass --auth-retry interact --auth-user-pass ~/.openvpn/user.txt'
 SORTBYTIME="--sort-by=.metadata.creationTimestamp"
+alias pandas='nix-shell -p python36Packages.pandas --run python'
