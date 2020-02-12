@@ -33,3 +33,4 @@ alias vpn='sudo openvpn --config ~/.openvpn/client.ovpn --auth-user-pass --auth-
 SORTBYTIME="--sort-by=.metadata.creationTimestamp"
 alias pandas='nix-shell -p python36Packages.pandas --run python'
 alias rm-old-pods='kubectl get pods --no-headers=true |grep -v "Running" | grep -v "Pending" | sed -E '"'"'s/([a-z0-9-]+).*/\1/g'"'"' | xargs kubectl delete pod'
+alias kc-watch-pods='kc get pods $SORTBYTIME --watch'
