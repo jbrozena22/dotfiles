@@ -111,7 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
-. $HOME/.nix-profile/etc/profile.d/nix.sh
 export GIT_EDITOR=vim
 export KUBE_EDITOR=vim
 #eval "$(pyenv init -)"
@@ -137,3 +136,5 @@ if [ -f '/home/john/google-cloud-sdk/path.zsh.inc' ]; then . '/home/john/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/john/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/john/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(direnv hook zsh)"
+export NIX_REMOTE=daemon

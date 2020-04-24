@@ -125,7 +125,6 @@ export PATH="$HOME/.node/bin:$PATH"
 export NODE_PATH="$HOME/.node/lib/node_modules:$NODE_PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-. $HOME/.nix-profile/etc/profile.d/nix.sh
 source <(kubectl completion bash)
 
 
